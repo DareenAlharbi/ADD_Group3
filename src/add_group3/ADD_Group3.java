@@ -16,7 +16,8 @@ public class ADD_Group3 {
      */
     public static void main(String[] args) {
         System.out.println("Hello im Dareen");
-         System.out.println("Hello im Marah");
+        System.out.println("Hello im Marah");
+        System.out.println("Hello im Aryam");
     }
     
 }
