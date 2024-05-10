@@ -18,23 +18,34 @@ import java.util.List;
  *
  * @author 96650
  */
-public class Group {
- 
-    private String name;
-    private List<Pilgrim> pigrims;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-    public Group(String name, List<Pilgrim> pigrims) {
+public class Group {
+    private String name;
+    private List<Pilgrim> pilgrims;
+
+    public Group(String name) {
         this.name = name;
-        this.pigrims = pigrims;
+        this.pilgrims = new ArrayList<>();
     }
 
     public String getName() {
         return name;
     }
 
-    public List<Pilgrim> getPigrims() {
-        return pigrims;
+    public List<Pilgrim> getPilgrims() {
+        return pilgrims;
     }
 
-    
+    public void addPilgrim(Pilgrim pilgrim) {
+        pilgrims.add(pilgrim);
+        System.out.println(pilgrim.getName() + " has been added to the group.");
+    }
+
+    public void removePilgrim(Pilgrim pilgrim) {
+        pilgrims.remove(pilgrim);
+        System.out.println(pilgrim.getName() + " has been removed from the group.");
+    }
 }
