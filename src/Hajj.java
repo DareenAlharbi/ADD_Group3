@@ -7,25 +7,42 @@
  *
  * @author m.als
  */
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 public class Hajj {
      
+ 
 
+    
+  
+   public static void testGroupClass() {
+        Scanner input = new Scanner(System.in);
 
-    private List<Group> groups;
+        System.out.print("Enter the group name: ");
+        String groupName = input.nextLine();
 
-    public Hajj() {
-        this.groups = new ArrayList<>();
-    }
+        Group group = new Group(groupName);
 
-    public void createGroup(String groupName, List<Pilgrim> pigrims) {
-        Group group = new Group(groupName, pigrims);
-        groups.add(group);
-    }
+        boolean continueAdding = true;
+        while (continueAdding) {
+            System.out.print("Enter the pilgrim name (or 'done' to finish adding): ");
+            String pilgrimName = input.nextLine();
 
-    public List<Group> getGroups() {
-        return groups;
+            if (pilgrimName.equalsIgnoreCase("done")) {
+                continueAdding = false;
+            } else {
+                Pilgrim pilgrim = new Pilgrim(pilgrimName);
+                group.addPilgrim(pilgrim);
+            }
+        }
+
+        System.out.println("\nGroup Name: " + group.getName());
+        System.out.println("Pilgrims:");
+        for (Pilgrim pilgrim : group.getPilgrims()) {
+            System.out.println(pilgrim.getName());
+        }
     }
 }
 
