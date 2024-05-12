@@ -47,7 +47,7 @@ public class Pilgrim {
     if(status == false) {
        System.out.print("The pilgrim with ID " + this.Pilgrim_Fname + " - " +ID+" is not stable ");
         currentLocation =  Map.getLoction(ID);
-   
+        
        MedicalEmergency.receiveStatusAlerts(ID,currentLocation);
     }
   }
