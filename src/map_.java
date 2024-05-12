@@ -7,15 +7,15 @@
  *
  * @author ffaat
  */
-public class MedicalEmergency {
-    
-    
-     public static void receiveStatusAlerts(String ID , Map loction) {
-        
-    
-         System.out.print("Found the pilgrim ");
-        
-    
+public class map_ {
+    private static map_ loction;
+   
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+     public static map_ getLoction(String ID) {
+        return loction;
 }
-     
+}
+
 }
