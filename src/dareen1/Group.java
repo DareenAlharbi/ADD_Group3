@@ -1,3 +1,7 @@
+package dareen1;
+
+
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -24,6 +28,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Group {
+
     private String name;
     private List<Pilgrim> pilgrims;
 
@@ -35,7 +40,6 @@ public class Group {
     public String getName() {
         return name;
     }
-
     public List<Pilgrim> getPilgrims() {
         return pilgrims;
     }
@@ -48,5 +52,11 @@ public class Group {
     public void removePilgrim(Pilgrim pilgrim) {
         pilgrims.remove(pilgrim);
         System.out.println(pilgrim.getName() + " has been removed from the group.");
+    }
+
+    private static class GroupString {
+
+        public GroupString() {
+        }
     }
 }
