@@ -12,7 +12,7 @@ public class Manager {
   
   public void trackPilgrimStatus(String ID ) {
   Map location= Map.getLoction(ID);  
-  //boolean status = Pilgrim.changePilgrimStatus(ID, true, location); // have problem
+  //boolean status = Pilgrim.changePilgrimStatus(ID, true, location); 
   boolean status= true;// have to delete
   if(status) {
    System.out.print("The pilgrim with ID " +ID+ "is stable");

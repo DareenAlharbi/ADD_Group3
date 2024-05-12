@@ -39,7 +39,7 @@ public class Pilgrim {
 }
    
     
-    public void changePilgrimStatus(String ID , boolean status , Map currentLocation  ){
+    public boolean changePilgrimStatus(String ID , boolean status , Map currentLocation  ){
      
     if(status == true) {
       System.out.print("The pilgrim with ID " + this.Pilgrim_Fname + " - " +ID+" is stable ");
@@ -50,6 +50,7 @@ public class Pilgrim {
         
        MedicalEmergency.receiveStatusAlerts(ID,currentLocation);
     }
+    return status;
   }
     
     
