@@ -8,6 +8,7 @@
  * @author m.als
  */
 
+//import add_group3.Group;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
