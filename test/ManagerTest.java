@@ -95,12 +95,23 @@ public class ManagerTest {
      */
     @Test
     public void testRemoveTrip() {
-        System.out.println("removeTrip");
-        Trip trip = null;
+        System.out.println("removePilgrim");
+
+        Pilgrim p = new Pilgrim("2222", "Aryam", true);
+     
         Manager instance = new Manager();
-        instance.removeTrip(trip);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
+        g group = new g("group1");
+        group.getPilgrims().add(p);  
+
+        String expResult = "The Pilgrim has been successfully removed from the group.";
+       
+        String result = instance.removePilgrim(group, p);
+        
+        assertEquals(expResult, result);
+        
+        assertFalse(group.getPilgrims().contains(p));
+
     }
 
     /**
@@ -221,6 +232,22 @@ public class ManagerTest {
         System.out.println("displayTripInfo");
         Manager instance = new Manager();
         instance.displayTripInfo();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of removePilgrim method, of class Manager.
+     */
+    @Test
+    public void testRemovePilgrim() {
+        System.out.println("removePilgrim");
+        g group = null;
+        Pilgrim pilgrim = null;
+        Manager instance = new Manager();
+        String expResult = "";
+        String result = instance.removePilgrim(group, pilgrim);
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

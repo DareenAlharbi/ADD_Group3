@@ -79,6 +79,13 @@ public  String addPilgrims(g group ,Pilgrim p) {
         }else
             return "The Pilgrim does not  added to the group. " ;
 }
+public String removePilgrim(g group, Pilgrim pilgrim) {
+        if (group.getPilgrims().contains(pilgrim)) {
+            group.getPilgrims().remove(pilgrim);
+            return "The Pilgrim has been successfully removed from the group.";
+        } else {
+            return "The Pilgrim is not in the group.";
+        }}
 
 
 
