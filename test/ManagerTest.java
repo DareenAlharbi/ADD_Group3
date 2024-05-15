@@ -133,6 +133,7 @@ public class ManagerTest {
      * Test of addInfo method, of class Manager.
      */
     
+
     //Aryam
 @Test
     public void testAddInfo() {
@@ -206,6 +207,21 @@ public class ManagerTest {
         instance.displayTripInfo();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of addPilgrims method, of class Manager.
+     */
+    
+      //Reema
+    @Test
+    public void testAddPilgrims() {
+        System.out.println("addPilgrims");
+        ArrayList<Pilgrim> pilgrims = new ArrayList<Pilgrim>();
+        Pilgrim p = new Pilgrim("2222","Aryam" , true) ;
+        String expResult = "The Pilgrim successfully added to the system. ";
+        String result = Manager.addPilgrims(pilgrims, p);
+        assertEquals(expResult, result);
     }
     
 }

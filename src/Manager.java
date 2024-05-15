@@ -71,6 +71,13 @@ public static void testGroupClass( ) {
         System.out.println(pilgrim.getName());
     }
 }
+//Reema
+public static String addPilgrims(List<Pilgrim> pilgrims,Pilgrim p) {
+        pilgrims.add(p);
+        return "The Pilgrim successfully added to the system. " ;
+}
+
+
 //-----2function Aryam
 public static void addInfo() {
         Scanner input = new Scanner(System.in);
