@@ -10,10 +10,13 @@ public class NewMain {
     public static void main(String[] args) {
         Manager manager = new Manager();
         // Creating a group
+        Pilgrim pilgrim = new Pilgrim("001", "Ahmed", true );
+        g group = new g("MyGroup");
+       manager.addPilgrims(group, pilgrim);
         manager. testGroupClass( );
         
         Map piliglocation = new Map("Mecca");
-        Pilgrim pilgrim = new Pilgrim("001", "Ahmed", true );
+        
         pilgrim.setCurrentLocation(piliglocation);
         //(pilgrim,piliglocation);
 
@@ -22,7 +25,6 @@ public class NewMain {
         Trip trip = new Trip(101, "Mecca", "Riyadh", new Date(), new Date());
         manager.addTrip(trip);
     
-        g group = new g("MyGroup");
         group.addPilgrim(new Pilgrim("Marah"));
         group.addPilgrim(new Pilgrim("Fatima"));
         group.addPilgrim(new Pilgrim("Aryam"));
@@ -30,6 +32,6 @@ public class NewMain {
         int pilgrimCount = group.getPilgrimCount();
         System.out.println("Number of pilgrims in the group: " + pilgrimCount);
         manager.displayTripInfo();
-        
+   
     }
 }

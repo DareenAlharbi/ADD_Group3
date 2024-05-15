@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author aryam
+ * @author ffaat
  */
 public class ManagerTest {
     
@@ -130,20 +129,37 @@ public class ManagerTest {
     }
 
     /**
-     * Test of addInfo method, of class Manager.
+     * Test of addPilgrims method, of class Manager.
      */
+    @Test
+    public void testAddPilgrims() {
+      System.out.println("addPilgrims");
+        
+
+        Pilgrim p = new Pilgrim("2222", "Aryam", true);
+
+        Manager instance = new Manager();
+
+        g group = new g("group1");
+        
+        String expResult = "The Pilgrim successfully added to the group.";
+
+        String result = instance.addPilgrims(group, p);
+  
+        assertEquals(expResult, result);
+    }
     
 
-    //Aryam
-@Test
+    /**
+     * Test of addInfo method, of class Manager.
+     */
+    @Test
     public void testAddInfo() {
         System.out.println("addInfo");
-        Manager p = new Manager(ArrayList<Trip> Trips );
-        Trip instance = new Trip(21, "215F", "PANIC ATTACK");
-        p.
-        assertNotNull(Manager.getTrips());
+        Manager.addInfo();
         // TODO review the generated test code and remove the default call to fail.
-    }//Aryam
+        fail("The test case is a prototype.");
+    }
 
     /**
      * Test of setTrips method, of class Manager.
@@ -207,21 +223,6 @@ public class ManagerTest {
         instance.displayTripInfo();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of addPilgrims method, of class Manager.
-     */
-    
-      //Reema
-    @Test
-    public void testAddPilgrims() {
-        System.out.println("addPilgrims");
-        ArrayList<Pilgrim> pilgrims = new ArrayList<Pilgrim>();
-        Pilgrim p = new Pilgrim("2222","Aryam" , true) ;
-        String expResult = "The Pilgrim successfully added to the system. ";
-        String result = Manager.addPilgrims(pilgrims, p);
-        assertEquals(expResult, result);
     }
     
 }

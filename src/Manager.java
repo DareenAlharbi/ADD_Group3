@@ -72,10 +72,14 @@ public static void testGroupClass( ) {
     }
 }
 //Reema
-public static String addPilgrims(List<Pilgrim> pilgrims,Pilgrim p) {
-        pilgrims.add(p);
-        return "The Pilgrim successfully added to the system. " ;
+public  String addPilgrims(g group ,Pilgrim p) {
+          group.addPilgrim(p);
+        if(group.getPilgrims().contains(p)){
+        return "The Pilgrim successfully added to the group." ;
+        }else
+            return "The Pilgrim does not  added to the group. " ;
 }
+
 
 
 //-----2function Aryam

@@ -1,14 +1,14 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -19,35 +19,35 @@ public class PilgrimTest {
     public PilgrimTest() {
     }
     
-    @BeforeAll
+    @BeforeClass
     public static void setUpClass() {
     }
     
-    @AfterAll
+    @AfterClass
     public static void tearDownClass() {
     }
     
-    @BeforeEach
+    @Before
     public void setUp() {
     }
     
-    @AfterEach
+    @After
     public void tearDown() {
     }
+   
 
     /**
      * Test of changePilgrimStatus method, of class Pilgrim.
      */
     @Test
     public void testChangePilgrimStatus() {
-        System.out.println("changePilgrimStatus");
+         System.out.println("changePilgrimStatus");
         boolean newStatus = false;
         Pilgrim instance = new Pilgrim();
         instance.setStatus(newStatus);
         boolean expResult = true;
         boolean result = instance.changePilgrimStatus();
         assertEquals(expResult, result);
-
     }
 
     /**
@@ -60,7 +60,8 @@ public class PilgrimTest {
         String expResult = "";
         String result = instance.getID();
         assertEquals(expResult, result);
-      
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -73,7 +74,8 @@ public class PilgrimTest {
         String expResult = "";
         String result = instance.getName();
         assertEquals(expResult, result);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -86,7 +88,8 @@ public class PilgrimTest {
         Map expResult = null;
         Map result = instance.getCurrentLocation();
         assertEquals(expResult, result);
-       
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -99,7 +102,8 @@ public class PilgrimTest {
         boolean expResult = false;
         boolean result = instance.getStatus();
         assertEquals(expResult, result);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -112,7 +116,8 @@ public class PilgrimTest {
         Manager expResult = null;
         Manager result = instance.getManager();
         assertEquals(expResult, result);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -124,7 +129,8 @@ public class PilgrimTest {
         String ID = "";
         Pilgrim instance = new Pilgrim();
         instance.setID(ID);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -136,7 +142,8 @@ public class PilgrimTest {
         String name = "";
         Pilgrim instance = new Pilgrim();
         instance.setName(name);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -148,7 +155,8 @@ public class PilgrimTest {
         Map currentLocation = null;
         Pilgrim instance = new Pilgrim();
         instance.setCurrentLocation(currentLocation);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -161,7 +169,8 @@ public class PilgrimTest {
         boolean expResult = false;
         boolean result = instance.isStatus();
         assertEquals(expResult, result);
-       
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -173,7 +182,8 @@ public class PilgrimTest {
         boolean status = false;
         Pilgrim instance = new Pilgrim();
         instance.setStatus(status);
-       
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -185,7 +195,8 @@ public class PilgrimTest {
         Manager manager = null;
         Pilgrim instance = new Pilgrim();
         instance.setManager(manager);
-        
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

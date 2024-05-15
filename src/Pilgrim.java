@@ -27,14 +27,14 @@ public class Pilgrim {
         
     }
 
-    ///fatima
+    ///-------------------
    public boolean changePilgrimStatus( ) {
         if (this.status== true ) {
             //
-            return  false ; // لا تغيير في الحالة
+            return  false ; // 
         }else 
         
-        return true; // تغيير ناجح في الحالة
+        return true;
     }
 
 
