@@ -16,6 +16,9 @@ public class Manager {
     }
     private List<Pilgrim> pilgrims = new ArrayList<>();
     private List<Trip> trips = new ArrayList<>();
+//Aryam
+    public Manager() {
+    }
 
 
     public void notifyStatusChange(Pilgrim pilgrim) {
@@ -68,8 +71,8 @@ public static void testGroupClass( ) {
         System.out.println(pilgrim.getName());
     }
 }
-//-----2function
-public static void addInfo(Pilgrim p) {
+//-----2function Aryam
+public static void addInfo() {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Location: ");
@@ -90,6 +93,7 @@ public static void addInfo(Pilgrim p) {
         System.out.println(info.toString());
         System.out.println("done");
     }
+//Aryam
 
     public static void setTrips(ArrayList<Trip> Trips) {
         Manager.Trips = Trips;

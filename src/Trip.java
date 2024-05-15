@@ -22,6 +22,7 @@ public class Trip {
       this.destination = destination;
       this.source = source;
     }
+    
 
     Trip(String tripId, String destination, String source, String startDate, String endDate) {
        
