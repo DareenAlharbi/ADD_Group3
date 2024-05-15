@@ -1,61 +1,91 @@
 
 
-
-
-
-
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author m.als
- */
 public class Pilgrim {
-
-    
-    private String Pilgrim_Fname;
+ 
     private String ID;
-    private boolean status;
+    private String name;
     private Map currentLocation;
-    
-  
-   public Pilgrim(String name, String ID, boolean status) {
-        this.Pilgrim_Fname = Pilgrim_Fname;
+    private boolean status;
+    private Manager manager;
+
+    public Pilgrim(String ID, String name, boolean status) {
         this.ID = ID;
+        this.name = name;
+       
+        this.status = status;
+       
+    }
+
+    Pilgrim() {
+       
+    }
+    
+
+
+    Pilgrim(String pilgrimName) {
+        this.name = pilgrimName;
+        
+    }
+
+    ///fatima
+   public boolean changePilgrimStatus( ) {
+        if (this.status== true ) {
+            //
+            return  false ; // لا تغيير في الحالة
+        }else 
+        
+        return true; // تغيير ناجح في الحالة
+    }
+
+
+    // Getters
+    public String getID() {
+        return ID;
+    }
+
+    public  String getName() {
+        return name;
+    }
+
+    public Map getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public boolean getStatus() {
+        return status;
+    }
+
+    public Manager getManager() {
+        return manager;
+    }
+
+    // Setters
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCurrentLocation(Map currentLocation) {
+        this.currentLocation = currentLocation;
+        
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+    
+    
+
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    public Pilgrim(String Pilgrim_name) {
-        this.Pilgrim_Fname = Pilgrim_name;
+    public void setManager(Manager manager) {
+        this.manager = manager;
     }
-
-    public String getName() {
-        return Pilgrim_Fname;
+    
     
 }
-   
-    
-    public boolean changePilgrimStatus(String ID , boolean status , Map currentLocation  ){
-     
-    if(status == true) {
-      System.out.print("The pilgrim with ID " + this.Pilgrim_Fname + " - " +ID+" is stable ");
-    }
-    if(status == false) {
-       System.out.print("The pilgrim with ID " + this.Pilgrim_Fname + " - " +ID+" is not stable ");
-        currentLocation =  Map.getLoction(ID);
-        
-       MedicalEmergency.receiveStatusAlerts(ID,currentLocation);
-    }
-    return status;
-  }
-    
-    
-    
-    }
-
-
-

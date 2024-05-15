@@ -1,21 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
-/**
- *
- * @author ffaat
- */
+
 public class MedicalEmergency {
-    
-    
-     public static void receiveStatusAlerts(String ID , Map loction) {
-        
-    
-         System.out.print("Found the pilgrim ");
-        
-    
-}
-     
+    public static void checkPilgrim(Pilgrim pilgrim) {
+        if (pilgrim.getStatus()==(true)) {
+            System.out.println("Emergency alert for Pilgrim: " + pilgrim.getName());
+        }
+    }
 }

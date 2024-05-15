@@ -1,22 +1,23 @@
 
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-
-/**
- *
- * @author HP
- */
 public class Map {
- 
-    private static Map loction;
-   
-    public static void main(String[] args) {
-        // TODO code application logic here
+    
+    private String location;
+
+    public Map(String location) {
+        this.location = location;
     }
-     public static Map getLoction(String ID) {
-        return loction;
-}
-}
+
+    public String getLocation() {
+        return location;
+    }
+
+    // تحديث موقع الحاج داخل كلاس Map
+    public void updatePilgrimLocation(Pilgrim pilgrim, String newLocation) {
+        if (pilgrim != null && newLocation != null && !newLocation.isEmpty()) {
+            this.location = newLocation;
+            System.out.println("Updating location for Pilgrim ID: " + pilgrim.getID() + " to " + newLocation);
+        } else {
+            System.out.println("Invalid location or pilgrim information provided.");
+        }
+    }}
