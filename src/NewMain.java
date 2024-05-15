@@ -10,7 +10,7 @@ public class NewMain {
     public static void main(String[] args) {
         Manager manager = new Manager();
         // Creating a group
-        manager.testGroupClass( );
+        manager. testGroupClass( );
         
         Map piliglocation = new Map("Mecca");
         Pilgrim pilgrim = new Pilgrim("001", "Ahmed", true );
