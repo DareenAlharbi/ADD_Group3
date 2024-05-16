@@ -4,6 +4,8 @@
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -67,15 +69,7 @@ public class ManagerTest {
     /**
      * Test of notifyStatusChange method, of class Manager.
      */
-    @Test
-    public void testNotifyStatusChange() {
-        System.out.println("notifyStatusChange");
-        Pilgrim pilgrim = null;
-        Manager instance = new Manager();
-        instance.notifyStatusChange(pilgrim);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
     /**
      * Test of addTrip method, of class Manager.
@@ -131,13 +125,14 @@ public class ManagerTest {
     /**
      * Test of testGroupClass method, of class Manager.
      */
-    @Test
-    public void testTestGroupClass() {
-        System.out.println("testGroupClass");
+    @Test(expected = InputMismatchException.class)
+    public void testTestGroupClass_InputMismatchException() {
+      
+
         Manager.testGroupClass();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
+
+
 
     /**
      * Test of addPilgrims method, of class Manager.
@@ -251,5 +246,8 @@ public class ManagerTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
+    /**
+     * Test of getGroupByName method, of class Manager.
+     */
 }

@@ -4,7 +4,7 @@ public class Pilgrim {
  
     private String ID;
     private String name;
-    private Map currentLocation;
+   
     private boolean status;
     private Manager manager;
 
@@ -27,6 +27,8 @@ public class Pilgrim {
         
     }
 
+ 
+
     ///-------------------
    public boolean changePilgrimStatus( ) {
         if (this.status== true ) {
@@ -47,9 +49,7 @@ public class Pilgrim {
         return name;
     }
 
-    public Map getCurrentLocation() {
-        return currentLocation;
-    }
+ 
 
     public boolean getStatus() {
         return status;
@@ -68,11 +68,7 @@ public class Pilgrim {
         this.name = name;
     }
 
-    public void setCurrentLocation(Map currentLocation) {
-        this.currentLocation = currentLocation;
-        
-    }
-
+   
     public boolean isStatus() {
         return status;
     }

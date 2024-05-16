@@ -29,7 +29,7 @@ public class g {
 
     public void addPilgrim(Pilgrim pilgrim) {
         pilgrims.add(pilgrim);
-        System.out.println(pilgrims.get(0).getName() + " has been added to the group.");
+        
     }
 
     public void removePilgrim(Pilgrim pilgrim) {

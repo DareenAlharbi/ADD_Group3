@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Manager {
     private static ArrayList<Trip> Trips = new ArrayList<>();
+     private static ArrayList<g> groups = new ArrayList<>();
     public void setPilgrims(List<Pilgrim> pilgrims,Pilgrim p) {
         this.pilgrims = pilgrims;
     }
@@ -18,12 +19,6 @@ public class Manager {
     private List<Trip> trips = new ArrayList<>();
 //Aryam
     public Manager() {
-    }
-
-
-    public void notifyStatusChange(Pilgrim pilgrim) {
-        System.out.println("Pilgrim status changed: " + pilgrim.getName());
-        MedicalEmergency.checkPilgrim(pilgrim);
     }
 
     public void addTrip(Trip trip) {
@@ -62,16 +57,10 @@ public static void testGroupClass( ) {
         } else {
             Pilgrim pilgrim = new Pilgrim(pilgrimName);
             group.addPilgrim(pilgrim);
-        }
-    }
-
-    System.out.println("\nGroup Name: " + group.getName());
-    System.out.println("Pilgrims:");
-    for (Pilgrim pilgrim : group.getPilgrims()) {
-        System.out.println(pilgrim.getName());
-    }
-}
-//Reema
+            System.out.println(pilgrim.getName() + " has been added to the group.");
+        }}}
+    
+   
 public  String addPilgrims(g group ,Pilgrim p) {
           group.addPilgrim(p);
         if(group.getPilgrims().contains(p)){
@@ -88,8 +77,7 @@ public String removePilgrim(g group, Pilgrim pilgrim) {
         }}
 
 
-
-//-----2function Aryam
+    
 public static void addInfo() {
         Scanner input = new Scanner(System.in);
 
@@ -136,6 +124,6 @@ public static void addInfo() {
             System.out.println(trip.toString());
         }
     }
-   
-
 }
+    
+    
