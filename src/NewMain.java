@@ -14,7 +14,7 @@ public class NewMain {
         Pilgrim pilgrim = new Pilgrim("001", "Ahmed", true );
         g group = new g("MyGroup");
        manager.addPilgrims(group, pilgrim);
-        manager.testGroupClass( new Scanner(System.in) );
+        manager.CreateGroup( new Scanner(System.in) );
        
         pilgrim.changePilgrimStatus();
 

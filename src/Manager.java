@@ -54,7 +54,7 @@ public class Manager {
         return null; // Group not found
     }
 //3 funcation    
-public static void testGroupClass( Scanner input) {
+public static void CreateGroup( Scanner input) {
   
 //create group
     System.out.print("Enter the group name: ");

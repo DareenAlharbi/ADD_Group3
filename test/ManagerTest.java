@@ -262,7 +262,7 @@ public class ManagerTest {
      */
     
  @Test (expected =NoSuchElementException.class)
-public void testTestGroupClass(){
+public void testCreateGroup(){
 
   // Set up the mock user input
         String userInput = "John Doe\nJane Doe\n";
@@ -272,7 +272,7 @@ public void testTestGroupClass(){
 
         // Execute the method under test
         Manager instance = new Manager();
-        instance.testGroupClass(new Scanner(System.in));
+        instance.CreateGroup(new Scanner(System.in));
 
         // Verify the outcomes
         g group = instance.getGroupByName("TestGroup");
