@@ -1,5 +1,6 @@
 
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,6 +9,12 @@ import java.util.Scanner;
 public class Manager {
     private static ArrayList<Trip> Trips = new ArrayList<>();
      private static ArrayList<g> groups = new ArrayList<>();
+
+    public static ArrayList<g> getGroups() {
+        return groups;
+    }
+
+    
     public void setPilgrims(List<Pilgrim> pilgrims,Pilgrim p) {
         this.pilgrims = pilgrims;
     }
@@ -38,9 +45,17 @@ public class Manager {
         }
         return sb.toString();
     }
+     public g getGroupByName(String groupName) {
+        for (g group : groups) {
+            if (group.getName().equals(groupName)) {
+                return group;
+            }
+        }
+        return null; // Group not found
+    }
 //3 funcation    
-public static void testGroupClass( ) {
-    Scanner input = new Scanner(System.in);
+public static void testGroupClass( Scanner input) {
+  
 //create group
     System.out.print("Enter the group name: ");
     String groupName = input.nextLine();

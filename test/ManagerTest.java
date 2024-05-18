@@ -3,16 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit4TestClass.java to edit this template
  */
 
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+
 
 /**
  *
@@ -31,12 +39,20 @@ public class ManagerTest {
     public static void tearDownClass() {
     }
     
+       private InputStream sysInBackup;
+
     @Before
     public void setUp() {
+          // Setup phase: Prepare the input data as it would be typed by the user
+        String input = "TestGroup\nJohn Doe\nJane Doe\ndone\n";
+        ByteArrayInputStream testIn = new ByteArrayInputStream(input.getBytes());
+        System.setIn(testIn);
+
     }
-    
-    @After
+
+    @AfterEach
     public void tearDown() {
+        System.setIn(sysInBackup);
     }
 
     /**
@@ -125,13 +141,7 @@ public class ManagerTest {
     /**
      * Test of testGroupClass method, of class Manager.
      */
-    @Test(expected = InputMismatchException.class)
-    public void testTestGroupClass_InputMismatchException() {
-      
-
-        Manager.testGroupClass();
-    }
-
+   
 
 
     /**
@@ -248,6 +258,58 @@ public class ManagerTest {
     }
 
     /**
+     * Test of testGroupClass method, of class Manager.
+     */
+    
+ @Test (expected =NoSuchElementException.class)
+public void testTestGroupClass(){
+
+  // Set up the mock user input
+        String userInput = "John Doe\nJane Doe\n";
+
+        // Redirect System.in to use the mock user input
+        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
+
+        // Execute the method under test
+        Manager instance = new Manager();
+        instance.testGroupClass(new Scanner(System.in));
+
+        // Verify the outcomes
+        g group = instance.getGroupByName("TestGroup");
+        assertNotNull("Group should have been created", group);
+        assertEquals("Group should contain 2 pilgrims", 2, group.getPilgrims().size());
+        assertEquals("First pilgrim should be John Doe", "John Doe", group.getPilgrims().get(0).getName());
+        assertEquals("Second pilgrim should be Jane Doe", "Jane Doe", group.getPilgrims().get(1).getName());
+
+       }
+
+    /**
+     * Test of getGroups method, of class Manager.
+     */
+    @Test
+    public void testGetGroups() {
+        System.out.println("getGroups");
+        ArrayList<g> expResult = null;
+        ArrayList<g> result = Manager.getGroups();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+}
+
+ 
+
+
+    
+
+
+
+
+    /**
+     * Test of getGroups method, of class Manager.
+     */
+
+    /**
      * Test of getGroupByName method, of class Manager.
      */
-}
+

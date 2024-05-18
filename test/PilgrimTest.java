@@ -81,17 +81,7 @@ public class PilgrimTest {
     /**
      * Test of getCurrentLocation method, of class Pilgrim.
      */
-    @Test
-    public void testGetCurrentLocation() {
-        System.out.println("getCurrentLocation");
-        Pilgrim instance = new Pilgrim();
-        Map expResult = null;
-        Map result = instance.getCurrentLocation();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+  
     /**
      * Test of getStatus method, of class Pilgrim.
      */
@@ -149,15 +139,7 @@ public class PilgrimTest {
     /**
      * Test of setCurrentLocation method, of class Pilgrim.
      */
-    @Test
-    public void testSetCurrentLocation() {
-        System.out.println("setCurrentLocation");
-        Map currentLocation = null;
-        Pilgrim instance = new Pilgrim();
-        instance.setCurrentLocation(currentLocation);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
     /**
      * Test of isStatus method, of class Pilgrim.

@@ -3,6 +3,7 @@
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 ///-------------------
 public class NewMain {
@@ -13,7 +14,7 @@ public class NewMain {
         Pilgrim pilgrim = new Pilgrim("001", "Ahmed", true );
         g group = new g("MyGroup");
        manager.addPilgrims(group, pilgrim);
-        manager.testGroupClass( );
+        manager.testGroupClass( new Scanner(System.in) );
        
         pilgrim.changePilgrimStatus();
 
