@@ -12,7 +12,7 @@ public class Group {
 
     private String nameg;
     private List<Pilgrim> pilgrims;
-    private static ArrayList<Group> groups = new ArrayList<>();
+  //  public static ArrayList<Group> groups = new ArrayList<>();
 
     public Group(String name) {
         this.nameg = name;

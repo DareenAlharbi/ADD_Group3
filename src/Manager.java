@@ -1,24 +1,27 @@
 
+
+
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Manager {
-
+ 
     private static ArrayList<Trip> Trips = new ArrayList<>();
 
     static ArrayList<Group> getGroups() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     private List<Trip> trips;
-
+    public static ArrayList<Group> groups = new ArrayList<>();
     private List<Pilgrim> pilgrims = new ArrayList<>();
 
   
     public static void CreateGroup(Scanner scanner) {
 
-        Scanner input = new Scanner(System.in);
+       Scanner input = new Scanner(System.in);
 
 //create group
         System.out.print("Enter the group name: ");
@@ -85,7 +88,17 @@ public class Manager {
         }
     }
 
-    Group getGroupByName(String group1) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+   // Group getGroupByName1(String group1) {
+   //     throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+   // }
+
+Group getGroupByName(String groupName) {
+      
+    for (Group group : groups) {
+        if (group.getName().equals(groupName)) {
+            return group;
+        }
     }
+    return null; // Return null if the group is not found
+}
 }
