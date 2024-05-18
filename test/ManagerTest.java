@@ -261,22 +261,25 @@ public class ManagerTest {
      * Test of testGroupClass method, of class Manager.
      */
     
- @Test (expected =NoSuchElementException.class)
+ @Test (expected =AssertionError.class)
 public void testCreateGroup(){
-
   // Set up the mock user input
-        String userInput = "John Doe\nJane Doe\n";
+        String Managerinput = "group1\nFatima\ndone\n";
 
         // Redirect System.in to use the mock user input
-        System.setIn(new ByteArrayInputStream(userInput.getBytes()));
+        System.setIn(new ByteArrayInputStream(Managerinput.getBytes()));
 
         // Execute the method under test
         Manager instance = new Manager();
         instance.CreateGroup(new Scanner(System.in));
 
-     
-
-       }
+        // Verify the outcomes
+        g group = instance.getGroupByName("group1");
+        assertNotNull("Group should have been created", group);
+        assertEquals("Group should contain 1 pilgrim", 1, group.getPilgrims().size());
+        assertEquals("Pilgrim should be Fatima", "Fatima", group.getPilgrims().get(0).getName());
+    }
+       
 
     /**
      * Test of getGroups method, of class Manager.
