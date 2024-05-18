@@ -4,39 +4,49 @@
  * and open the template in the editor.
  */
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class g {
+public class Group {
+
     private String nameg;
     private List<Pilgrim> pilgrims;
+    private static ArrayList<Group> groups = new ArrayList<>();
 
-    public g(String name) {
+    public Group(String name) {
         this.nameg = name;
         this.pilgrims = new ArrayList<>();
+    }
+
+    public Group() {
+
     }
 
     public String getName() {
         return nameg;
     }
-    
 
-    public  List<Pilgrim> getPilgrims() {
+    public List<Pilgrim> getPilgrims() {
         return pilgrims;
     }
 
     public void addPilgrim(Pilgrim pilgrim) {
         pilgrims.add(pilgrim);
-        
+
     }
 
-    public void removePilgrim(Pilgrim pilgrim) {
+    public void removePilgrim1(Pilgrim pilgrim) {
         pilgrims.remove(pilgrim);
-        System.out.println(pilgrims.get(0).getName()+ " has been removed from the group.");
     }
+
+    public void removePilgrim(Pilgrim pilgrim) {/////org
+        pilgrims.remove(pilgrim);
+        System.out.println(pilgrims.get(0).getName() + " has been removed from the group.");
+    }
+
     public int getPilgrimCount() {
-        return pilgrims.size();
+        return pilgrims.size() - 1;
     }
+
 }

@@ -1,8 +1,8 @@
 
-
 import java.util.Date;
 
 public class Trip {
+
     private int tripId;
     private String destination;
     private String source;
@@ -18,14 +18,9 @@ public class Trip {
     }
 
     Trip(int i, String makkah, String trip_1) {
-      this.tripId = tripId;
-      this.destination = destination;
-      this.source = source;
-    }
-    
-
-    Trip(String tripId, String destination, String source, String startDate, String endDate) {
-       
+        this.tripId = tripId;
+        this.destination = destination;
+        this.source = source;
     }
 
     @Override

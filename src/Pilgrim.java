@@ -30,7 +30,11 @@ public class Pilgrim {
  
 
     ///-------------------
-   public boolean changePilgrimStatus( ) {
+    public boolean currentState(boolean state) {
+    this.status = state;
+    return this.status;
+}
+   public boolean changePilgrimStatus() {
         if (this.status== true ) {
             //
             return  false ; // 
@@ -38,6 +42,7 @@ public class Pilgrim {
         
         return true;
     }
+   
 
 
     // Getters
@@ -52,7 +57,8 @@ public class Pilgrim {
  
 
     public boolean getStatus() {
-        return status;
+        
+        return this.status;
     }
 
     public Manager getManager() {
